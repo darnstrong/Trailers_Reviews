@@ -1,0 +1,164 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 APIs - Master</title>
+    <link rel="stylesheet" href="css/video.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/overrides.css">
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <!-- map modal -->
+
+    <!-- top nav -> not functional yet -->
+     <header class="topNav">
+      <nav>
+        <img src="images/logo-s.png" alt="mini logo" class="left">
+        <ul class="no-bullet inline-list">
+          <li>Tickets<img class="right chevron" src="images/down-arrow.png"></li>
+          <li>IMDB.COM<img class="right chevron" src="images/down-arrow.png"></li>
+          
+        </ul>
+        <div class="global-nav-item right findDealer"><i class="fa fa-map-marker"></i>find a Theater</div>
+      </nav>
+    </header>
+  
+    <!-- large images / models -->
+    <div class="row hide">
+      <div class="small-12 columns">
+        <div class="mainContainer">
+          <!-- added this div called cars for the roundabout -->
+          <div id="cars">
+            <img class="F55" src="images/F55-en.png" alt="COLOSSAL">
+            <img src="images/F56-en.png" alt="Dead Pool" class="F56">
+            <img src="images/R57-en.png" alt="Logan" class="R57">
+            <img src="images/R58-en.png" alt="Transforemers 5" class="R58">
+            <img src="images/R59-en.png" alt="Fast 8" class="R59">
+            <img src="images/R60-en.png" alt="Justice League" class="R60">
+            <img src="images/R61-en.png" alt="Power Rangers" class="R61">
+            <img src="images/R62-en.png" alt="Kong" class="R62">
+            <img src="images/R63-en.png" alt="Wonder Women" class="R63">
+            <img src="images/R64-en.png" alt="Home Coming" class="R64">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- thumbnail images -->
+    <div class="row car-thumbs">
+      <div class="small-6 columns">
+        <h4 class="subhead">CHOOSE YOUR TRAILER :</h4>
+        <div class="thumbInfo">
+          <img src="images/F55.jpg" alt="COLOSSAL" id="F55" data-roundaboutindex="0">
+          <img src="images/F56.jpg" alt="Dead Pool" id="F56" data-roundaboutindex="1">
+          <img src="images/R57.jpg" alt="Logan" id="R57" data-roundaboutindex="2">
+          <img src="images/R58.jpg" alt="Transformers 5" id="R58" data-roundaboutindex="3">
+          <img src="images/R59.jpg" alt="Fast 8" id="R59" data-roundaboutindex="4">
+          <img src="images/R60.jpg" alt="Justice League" id="R60" data-roundaboutindex="5">
+          <img src="images/R61.jpg" alt="Power Rangers" id="R61" data-roundaboutindex="6">
+          <img src="images/R62.jpg" alt="Kong" id="R62" data-roundaboutindex="7">
+          <img src="images/R63.jpg" alt="Wonder Women" id="R63" data-roundaboutindex="8">
+          <img src="images/R64.jpg" alt="Home Coming" id="R64" data-roundaboutindex="9">
+        </div>
+        <hr>
+        <!-- social media icons / save to localstorage -->
+        <div class="socialIcons">
+          <span class="right"><i class="fa fa-refresh"></i></span>
+          <ul class="inline-list">
+            <li><i class="fa fa-download"></i>Save selection</li>
+            <li><i class="fa fa-facebook-official" data-tooltip aria-haspopup="true" class="has-tip" title="Post this"></i></li>
+            <li><i class="fa fa-pinterest-p" data-tooltip aria-haspopup="true" class="has-tip" title="pin this"></i></li>
+            <li><i class="fa fa-thumbs-up" data-tooltip aria-haspopup="true" class="has-tip" title="Like this"></i></li>
+            <li><i class="fa fa-twitter" data-tooltip aria-haspopup="true" class="has-tip" title="Tweet this"></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+<div class="small-12 medium-12 large-12 columns">
+      <video id="myvideo" controls>
+    <source src="video/transformers.mp4" type="video/mp4">
+    <source src="video/deadpool.mp4" type="video/mp4">
+    <source src="video/justiceleague.mp4" type="video/mp4">
+    <source src="video/powerrangers.mp4" type="video/mp4">
+    <source src="video/COLOSSAL.mp4" type="video/mp4">
+    <source src="video/wonderwoman.mp4" type="video/mp4">
+    <source src="video/logan.mp4" type="video/mp4">
+    <source src="video/spiderman.mp4" type="video/mp4">
+    <source src="video/fast8.mp4" type="video/mp4">
+    <source src="video/KONG.mp4" type="video/mp4">
+    
+  </video>
+  </div>
+    </div>
+
+
+
+<div class="row">
+<div class="small-12 medium-12 large-12 columns">
+<div class="controls hideMe">
+  <input type="button" class="pPause" value="Pause">
+  <button id="volDown">Vol Down</button>
+  <button id="volUp">Vol Up</button>
+  <button id="volMute">Mute</button>
+</div>
+</div>
+</div>
+      
+      <!-- model info block  -->
+      <div class="small-6 columns modelInfo">         
+          <h4 class="modelName">Trailer Name Here</h4>
+          <p class="priceInfo">Release Date Here</p>
+          <p class="modelDetails">Review Here</p>          
+      </div>
+    </div> <!-- end model info / thumbs -->
+    <hr>
+    
+
+    <div class="row"><!-- geolocation stuff / mapping -->
+      <div class="small-6 columns">
+        <div id="map-canvas"></div>
+        <i class="fa fa-expand left">&nbsp;Click to expand map</i>
+      </div>
+      
+      <div class="small-6 columns">
+        <div>
+          <h4>Find a theater close to you!</h4>
+          <div class="row searchButtons">
+            <div class="small-6 columns">
+              <button id="findAtCurrent">Find Theater</button>
+            </div>
+            <div class="small-6 columns">
+              <button id="directionsButton">Get Directions</button>
+            </div>
+            <div class="small-8 columns">
+              <input id="changeLoc" type="text" placeholder="change your location ie Toronto, Ontario">
+            </div>
+            <div class="small-4 columns">
+              <button class="doGeo">Go!</button>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+    
+    <hr>
+
+    <div class="row"><!-- footer div -->
+      <footer class="small-12 columns">
+        footer info here
+      </footer>      
+    </div>
+    <script src="js/vendor/jquery.js"></script>    
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    
+    <script src="js/master.js"></script>
+    <script src="js/video.js"></script>
+  </body>
+</html>
